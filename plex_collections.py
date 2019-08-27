@@ -28,11 +28,11 @@ f= open("missing.txt","w").close()
 # iterate through the sheet adding collection tags to the movies or record they are missing
 for row in sheet:
   if len(str(row['Collection Name'])) > 1:
-    collection_name = row['Collection Name']
+    collection_name = str(row['Collection Name'])
 
   if len(str(row['Movies'])):
     try:
-      plex.library.section(LIBRARY).get(row['Movies']).addCollection(collection_name)
+      plex.library.section(LIBRARY).get(str(row['Movies'])).addCollection(collection_name)
       print("Adding {} to {}".format(row['Movies'], collection_name))
     except NotFound:
       f= open("missing.txt","a+")
