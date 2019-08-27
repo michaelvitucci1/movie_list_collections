@@ -9,7 +9,7 @@ I wasn't able to do a lot of testing as I was missing quite a few of the movies,
 # Instructions
 To get this to work, I copied a version of the spreadsheet to my Drive account and set up an API service for that. I used the following guide to achieve this. I'm sure there is a far better way to achieve this, but I wasn't sure if there were security concerns linking it to my API.
 
-https://www.reddit.com/r/PleX/comments/cvgl97/im_making_a_big_list_of_movie_collections/
+https://www.twilio.com/blog/2017/02/an-easy-way-to-read-and-write-to-a-google-spreadsheet-in-python.html
 
 From there, I create some variable that should be changed for your specific Drive and Plex credentials.
 Finally to run this script make sure oauth2client, gspread, and the Plex API wrapper are all installed.
