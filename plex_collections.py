@@ -26,8 +26,8 @@ sheet = client.open(GSPREAD_NAME).sheet1
 sheet = sheet.get_all_records()
 
 def record_missing():
-  f= open("missing.txt","a+")
-  f.write(row['Movies'] + '\n')
+  f= open("missing.txt","a+", encoding='utf8')
+  f.write(str(row['Movies']) + '\n')
   f.close
 
 # open and clear a file to record missing movies
